@@ -1,0 +1,23 @@
+.intro {
+  position: relative;
+  color: $color-default-white;
+
+  &__title {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 50%;
+
+    padding: 3.5rem 2rem 0;
+    z-index: 100;
+    background: $black-to-right;
+  }
+
+  &__heading {
+    display: block;
+    font-weight: 300;
+    font-size: 8rem;
+    line-height: 1.1;
+  }
+}

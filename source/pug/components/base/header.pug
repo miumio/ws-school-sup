@@ -26,7 +26,6 @@ mixin header(headerMods, currentUrl)
   header.header(class=headerMods)
     .header__row
       if(currentUrl === "index.html")
-        //- lighthouse снимает 10 баллов SEO за <a> без href
         +picture("content", "logo-200-56", "png", 200, 56, "Логотип Школы Ветра в Строгино")
       else
         a.header__logo(href="index.html" aria-label="Переход на главную") Логотип
