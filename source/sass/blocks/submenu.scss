@@ -1,0 +1,29 @@
+.submenu {
+  padding-top: 5px;
+  padding-bottom: 5px;
+
+  &__icon {
+    vertical-align: bottom;
+  }
+
+  &__item {
+    padding-right: 32px;
+  }
+
+  &__tel {
+    font-weight: 500;
+    font-size: 1rem;
+
+    white-space: nowrap;
+  }
+
+  &__tel--main {
+    font-weight: 700;
+    color: $color-blue;
+  }
+
+  &__adress {
+    padding-right: 0;
+    margin-left: auto;
+  }
+}

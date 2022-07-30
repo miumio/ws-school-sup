@@ -21,28 +21,38 @@ mixin header(headerMods, currentUrl)
         href: "#",
         text: "Цены"
       },
-      {
-        href: "#",
-        text: "Как добраться"
-      },
     ]
 
   header.header(class=headerMods)
-    .container
+    .header__row
       if(currentUrl === "index.html")
         //- lighthouse снимает 10 баллов SEO за <a> без href
         +picture("content", "logo-200-56", "png", 200, 56, "Логотип Школы Ветра в Строгино")
       else
-        a.header__logo(href="index.html", aria-label="Переход на главную") Логотип
+        a.header__logo(href="index.html" aria-label="Переход на главную") Логотип
       nav.main-nav
-        button.main-nav__toggle.btn-reset(type="button", aria-label="Переключатель отображения меню", aria-pressed="false")
-          +icon("icon-burger", 20, 20)
+        button.main-nav__toggle.toggle.btn-reset(type="button" aria-label="Переключатель отображения меню" aria-pressed="false")
+          span.toggle__line
+          span.toggle__line
         .main-nav__wrapper
-          ul.main-nav__list
+          ul.main-nav__list.list-reset(role="list")
             each link in headerLinks
               - const activeState = currentUrl === link.href
               li.main-nav__item
                 if(activeState)
                   span.main-nav__link.is-active=link.text
                 else
-                  a.main-nav__link(href=link.href)=link.text
+                  a.main-nav__link.link(href=link.href)=link.text
+    ul.header__row.header__submenu.submenu.list-reset(role="list")
+      li.submenu__item
+        a(href="tel:+79166011546").link.submenu__tel.submenu__tel--main +7 916 601 1546
+
+      li.submenu__item
+        a(href="tel:+79261739847").link.submenu__tel
+          +icon("icons-whatsapp", 24, 24).submenu__icon
+          | +7 926 173 9847
+
+      li.submenu__item.submenu__adress
+        a(href="").link
+          | Строгинское шоссе, вл.3 (м. Строгино или м. Щукинская)
+          +icon("icon-pin", 10, 10)

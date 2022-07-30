@@ -1,20 +1,21 @@
 .main-nav {
+  margin-left: auto;
+  padding-bottom: 6px;
+
   &__list {
     display: flex;
-    margin: 0;
-    margin-right: 20px;
-    margin-left: 60px;
-    padding: 0;
+    flex-wrap: wrap;
+    justify-content: flex-end;
 
-    list-style: none;
-  }
+    margin-right: -16px;
 
-  &__item {
-    margin-right: 20px;
+    @include vp-1023 {
+      display: none;
+    }
   }
 
   &__link {
-    color: $color-default-white;
+    padding: 8px 16px;
 
     &.is-active {
       opacity: 0.6;
@@ -23,5 +24,9 @@
 
   &__toggle {
     display: none;
+
+    @include vp-1023 {
+      display: flex;
+    }
   }
 }
