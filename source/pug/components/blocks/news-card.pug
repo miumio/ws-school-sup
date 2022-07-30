@@ -1,0 +1,8 @@
+mixin news-card(data)
+
+  article.news-card
+    .news-card__cover.aspect-ratio
+      +picture("content/news", data.img.name, "jpg", data.img.width, data.img.height, data.title)
+    h2.news-card__title.title.title--sm !{data.title}
+    p.news-card__text !{data.text}
+    a(href="#").news-card__link.link Подробнее

@@ -79,3 +79,19 @@
   cursor: pointer;
   background-color: transparent;
 }
+
+.aspect-ratio {
+  position: relative;
+  height: 0;
+  padding-top: 302px / 465px * 100%;
+  background-color: $color-default-black;
+  overflow: hidden;
+
+  img {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    transform: translateY(-50%);
+  }
+}

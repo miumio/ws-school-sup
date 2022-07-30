@@ -1,0 +1,33 @@
+.news-card {
+  &__link::after {
+    content: "→";
+    padding-left: 8px;
+  }
+
+  &__title {
+    padding: 0.8rem 0 0.5rem;
+  }
+
+  &__text {
+    margin: 0 0 0.5rem;
+    /* stylelint-disable-next-line */
+    display: -webkit-box;
+    /* stylelint-disable-next-line */
+    -webkit-line-clamp: 3;
+    /* stylelint-disable-next-line */
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+    overflow: hidden;
+
+    @include vp-767 {
+      -webkit-line-clamp: 3;
+    }
+  }
+
+  &__link {
+    font-size: 0.7rem;
+    font-weight: 500;
+    letter-spacing: 0.03rem;
+    text-transform: uppercase;
+  }
+}
