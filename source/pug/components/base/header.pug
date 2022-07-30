@@ -43,16 +43,4 @@ mixin header(headerMods, currentUrl)
                   span.main-nav__link.is-active=link.text
                 else
                   a.main-nav__link.link(href=link.href)=link.text
-    ul.header__row.header__submenu.submenu.list-reset(role="list")
-      li.submenu__item
-        a(href="tel:+79166011546").link.submenu__tel.submenu__tel--main +7 916 601 1546
-
-      li.submenu__item
-        a(href="tel:+79261739847").link.submenu__tel
-          +icon("icons-whatsapp", 24, 24).submenu__icon
-          | +7 926 173 9847
-
-      li.submenu__item.submenu__adress
-        a(href="").link
-          | Строгинское шоссе, вл.3 (м. Строгино или м. Щукинская)
-          +icon("icon-pin", 10, 10)
+    +submenu().header__row.header__submenu
