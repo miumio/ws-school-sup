@@ -2,16 +2,26 @@
   position: relative;
   color: $color-default-white;
 
+  @include vp-1023 {
+    color: $color-default-black;
+  }
+
   &__title {
     position: absolute;
     top: 0;
     right: 0;
     left: 0;
-    bottom: 50%;
+    bottom: 70%;
 
     padding: 3.5rem 2rem 0;
     z-index: 100;
     background: $black-to-right;
+
+    @include vp-1023 {
+      position: unset;
+      background: none;
+      font-size: 1.4rem;
+    }
   }
 
   &__heading {
@@ -19,5 +29,23 @@
     font-weight: 300;
     font-size: 8rem;
     line-height: 1.1;
+
+    @include vp-1023 {
+      font-size: 5rem;
+    }
+  }
+
+  &__subtitle {
+    max-width: 60%;
+    margin: 0 auto;
+    padding-top: 2rem;
+    color: $color-default-black;
+    font-size: 1.5rem;
+  }
+
+  .swiper {
+    --swiper-pagination-color: #2990cb;
+    --swiper-pagination-bullet-inactive-color: #fff;
+    --swiper-pagination-bullet-inactive-opacity: 0.5;
   }
 }

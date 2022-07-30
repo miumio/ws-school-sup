@@ -4,6 +4,7 @@ import {initCustomSelect} from './modules/form/init-custom-select';
 import {initFormValidate} from './modules/form/init-form-validate';
 import { initSwipers } from './modules/init-swiper';
 import { initNewsSwiper } from './modules/init-news-slider';
+import { toggleText } from './modules/toggle-text';
 
 // ---------------------------------
 
@@ -15,6 +16,7 @@ window.addEventListener('DOMContentLoaded', () => {
   iosVhFix();
   initSwipers();
   initNewsSwiper();
+  toggleText();
 
   // Modules
   // ---------------------------------

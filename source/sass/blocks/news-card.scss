@@ -1,7 +1,6 @@
 .news-card {
   &__link::after {
-    content: "→";
-    padding-left: 8px;
+    content: " ↓";
   }
 
   &__title {
@@ -19,6 +18,9 @@
     text-overflow: ellipsis;
     overflow: hidden;
 
+    max-height: 63px;
+    transition: max-height $trans-modal;
+
     @include vp-767 {
       -webkit-line-clamp: 3;
     }
@@ -29,5 +31,20 @@
     font-weight: 500;
     letter-spacing: 0.03rem;
     text-transform: uppercase;
+  }
+
+  &.is-open {
+    .news-card__text {
+      display: block;
+      max-height: 5000px;
+    }
+
+    .news-card__link::after {
+      content: "скрыть ↑"
+    }
+
+    .news-card__link span {
+      display: none;
+    }
   }
 }

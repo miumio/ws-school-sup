@@ -1321,6 +1321,7 @@ html {
   font-family: "Open Sans", "Helvetica", "Verdana", sans-serif;
   line-height: 1.3;
   color: #17171B;
+  scroll-behavior: smooth;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
@@ -1776,10 +1777,19 @@ button,
   font-weight: 700;
 }
 
+.subtitle {
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 300;
+  line-height: 1.5;
+}
+
 .submenu {
-  padding-top: 5px;
-  padding-bottom: 9px;
+  padding-top: 14px;
+  padding-bottom: 20px;
   font-size: 0.8rem;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
 }
 
 .submenu__icon {
@@ -1803,7 +1813,10 @@ button,
 
 .submenu__adress {
   padding-right: 0;
-  margin-left: auto;
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  text-align: right;
 }
 
 .submenu svg {
@@ -2288,9 +2301,12 @@ button,
   opacity: 1;
 }
 
+.swiper {
+  --swiper-pagination-bullet-horizontal-gap: 0.5rem;
+}
+
 .swiper .swiper-button-next,
 .swiper .swiper-button-prev {
-  opacity: 0.99;
   color: #ffffff;
 }
 
@@ -2304,7 +2320,7 @@ button,
   top: 0;
   right: 0;
   left: 0;
-  bottom: 50%;
+  bottom: 70%;
   padding: 3.5rem 2rem 0;
   z-index: 100;
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.75)), color-stop(75%, rgba(0, 0, 0, 0)));
@@ -2319,17 +2335,42 @@ button,
   line-height: 1.1;
 }
 
+.intro__subtitle {
+  max-width: 60%;
+  margin: 0 auto;
+  padding-top: 2rem;
+  color: #17171B;
+  font-size: 1.5rem;
+}
+
+.intro .swiper {
+  --swiper-pagination-color: #2990cb;
+  --swiper-pagination-bullet-inactive-color: #fff;
+  --swiper-pagination-bullet-inactive-opacity: 0.5;
+}
+
 .section {
+  position: relative;
   padding: 3rem 0;
 }
 
 .section__title {
-  margin-bottom: 1rem;
+  margin: 1.5rem 0;
+}
+
+.section__icon {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 200px;
+  height: auto;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
 }
 
 .news-card__link::after {
-  content: "→";
-  padding-left: 8px;
+  content: " ↓";
 }
 
 .news-card__title {
@@ -2347,6 +2388,10 @@ button,
   -o-text-overflow: ellipsis;
   text-overflow: ellipsis;
   overflow: hidden;
+  max-height: 63px;
+  -webkit-transition: max-height 0.6s cubic-bezier(0.55, 0, 0.1, 1);
+  -o-transition: max-height 0.6s cubic-bezier(0.55, 0, 0.1, 1);
+  transition: max-height 0.6s cubic-bezier(0.55, 0, 0.1, 1);
 }
 
 .news-card__link {
@@ -2356,8 +2401,35 @@ button,
   text-transform: uppercase;
 }
 
+.news-card.is-open .news-card__text {
+  display: block;
+  max-height: 5000px;
+}
+
+.news-card.is-open .news-card__link::after {
+  content: "скрыть ↑";
+}
+
+.news-card.is-open .news-card__link span {
+  display: none;
+}
+
 .news .swiper-pagination {
   position: unset;
+  padding: 1rem 0;
+}
+
+.news .swiper-pagination-bullet {
+  background: none;
+  border: 1px solid #eab73b;
+  opacity: 1;
+  -webkit-transition: opacity 0.3s ease;
+  -o-transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease;
+}
+
+.news .swiper-pagination-bullet-active {
+  border: 1px solid #2990cb;
 }
 
 /* @media (hover: hover), screen and (min-width: 0\0) {
@@ -2387,6 +2459,11 @@ button,
   .custom-select__item:focus {
     background-color: rgba(255, 255, 255, 0.4);
   }
+
+  .news .swiper-pagination-bullet:hover,
+  .news .swiper-pagination-bullet:focus {
+    border: 1px solid #2990cb;
+  }
 }
 
 @media (max-width: 1439px) {
@@ -2409,11 +2486,39 @@ button,
     display: -ms-flexbox;
     display: flex;
   }
+
+  .swiper .swiper-button-next,
+  .swiper .swiper-button-prev {
+    display: none;
+  }
+
+  .swiper .swiper-pagination {
+    display: none;
+  }
+
+  .intro {
+    color: #17171B;
+  }
+
+  .intro__title {
+    position: unset;
+    background: none;
+    font-size: 1.4rem;
+  }
+
+  .intro__heading {
+    font-size: 5rem;
+  }
 }
 
 @media (max-width: 767px) {
   .container {
     padding: 0 16px;
+  }
+
+  .header__row {
+    padding-left: 16px;
+    padding-right: 16px;
   }
 
   .modal__wrapper {
@@ -2427,6 +2532,12 @@ button,
 
   .modal--fit-content .modal__content {
     width: 100%;
+  }
+
+  .submenu__adress {
+    padding-top: 5px;
+    min-width: 100%;
+    text-align: left;
   }
 
   .news-card__text {

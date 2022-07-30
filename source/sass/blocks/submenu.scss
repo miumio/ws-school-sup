@@ -1,8 +1,10 @@
 .submenu {
-  padding-top: 5px;
-  padding-bottom: 9px;
+  padding-top: 14px;
+  padding-bottom: 20px;
 
   font-size: 0.8rem;
+
+  flex-wrap: wrap;
 
   &__icon {
     vertical-align: bottom;
@@ -26,7 +28,14 @@
 
   &__adress {
     padding-right: 0;
-    margin-left: auto;
+    flex: 1;
+    text-align: right;
+
+    @include vp-767 {
+      padding-top: 5px;
+      min-width: 100%;
+      text-align: left;
+    }
   }
 
   svg {

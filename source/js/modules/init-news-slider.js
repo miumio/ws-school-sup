@@ -2,7 +2,7 @@ export const initNewsSwiper = () => {
   // eslint-disable-next-line
   let swiper = new Swiper('[data-news-swiper]', {
     direction: 'horizontal',
-    slideToClickedSlide: true,
+    slideToClickedSlide: false,
     a11y: {
       prevSlideMessage: 'Предыдущий слайд',
       nextSlideMessage: 'Следующий слайд',

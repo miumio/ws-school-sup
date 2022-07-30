@@ -1,5 +1,24 @@
 .news {
   .swiper-pagination {
     position: unset;
+    padding: 1rem 0;
+  }
+
+  .swiper-pagination-bullet {
+    background: none;
+    border: 1px solid $color-yellow;
+    opacity: 1;
+    transition: opacity $trans-default;
+
+    @media (hover: hover), screen and (min-width: 0\0) {
+      &:hover,
+      &:focus {
+        border: 1px solid $color-blue;
+      }
+    }
+  }
+
+  .swiper-pagination-bullet-active {
+    border: 1px solid $color-blue;
   }
 }
