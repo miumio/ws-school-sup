@@ -11,11 +11,66 @@
 
 @font-face {
   font-style: normal;
-  font-weight: 400;
-  font-family: "";
+  font-weight: 300;
+  font-family: "Open Sans";
 
   font-display: swap;
   src:
-    url("../fonts/.woff2") format("woff2"),
-    url("../fonts/.woff") format("woff");
+    url("../fonts/open-sans-300.woff2") format("woff2"),
+    url("../fonts/open-sans-300.woff") format("woff");
+}
+
+@font-face {
+  font-style: normal;
+  font-weight: 400;
+  font-family: "Open Sans";
+
+  font-display: swap;
+  src:
+    url("../fonts/open-sans-regular.woff2") format("woff2"),
+    url("../fonts/open-sans-regular.woff") format("woff");
+}
+
+@font-face {
+  font-style: normal;
+  font-weight: 500;
+  font-family: "Open Sans";
+
+  font-display: swap;
+  src:
+    url("../fonts/open-sans-500.woff2") format("woff2"),
+    url("../fonts/open-sans-500.woff") format("woff");
+}
+
+@font-face {
+  font-style: normal;
+  font-weight: 600;
+  font-family: "Open Sans";
+
+  font-display: swap;
+  src:
+    url("../fonts/open-sans-600.woff2") format("woff2"),
+    url("../fonts/open-sans-600.woff") format("woff");
+}
+
+@font-face {
+  font-style: normal;
+  font-weight: 700;
+  font-family: "Open Sans";
+
+  font-display: swap;
+  src:
+    url("../fonts/open-sans-700.woff2") format("woff2"),
+    url("../fonts/open-sans-700.woff") format("woff");
+}
+
+@font-face {
+  font-style: normal;
+  font-weight: 800;
+  font-family: "Open Sans";
+
+  font-display: swap;
+  src:
+    url("../fonts/open-sans-800.woff2") format("woff2"),
+    url("../fonts/open-sans-800.woff") format("woff");
 }

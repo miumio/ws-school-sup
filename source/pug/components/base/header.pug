@@ -2,16 +2,28 @@ mixin header(headerMods, currentUrl)
   -
     const headerLinks = [
       {
-        href: "index.html",
-        text: "Главная"
+        href: "#",
+        text: "Новости"
       },
       {
         href: "#",
-        text: "Страница 2"
+        text: "Обучение"
       },
       {
         href: "#",
-        text: "Страница 3"
+        text: "Прокат"
+      },
+      {
+        href: "#",
+        text: "Прогулки"
+      },
+      {
+        href: "#",
+        text: "Цены"
+      },
+      {
+        href: "#",
+        text: "Как добраться"
       },
     ]
 
@@ -19,7 +31,7 @@ mixin header(headerMods, currentUrl)
     .container
       if(currentUrl === "index.html")
         //- lighthouse снимает 10 баллов SEO за <a> без href
-        span.header__logo Логотип
+        +picture("content", "logo-200-56", "png", 200, 56, "Логотип Школы Ветра в Строгино")
       else
         a.header__logo(href="index.html", aria-label="Переход на главную") Логотип
       nav.main-nav
