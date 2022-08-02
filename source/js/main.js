@@ -5,6 +5,7 @@ import {initFormValidate} from './modules/form/init-form-validate';
 import { initSwipers } from './modules/init-swiper';
 import { initNewsSwiper } from './modules/init-news-slider';
 import { toggleText } from './modules/toggle-text';
+import { initScrollToTop } from './modules/init-scroll-to-top';
 
 // ---------------------------------
 
@@ -17,6 +18,7 @@ window.addEventListener('DOMContentLoaded', () => {
   initSwipers();
   initNewsSwiper();
   toggleText();
+  initScrollToTop();
 
   // Modules
   // ---------------------------------

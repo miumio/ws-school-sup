@@ -4,9 +4,10 @@ section.map.section#map
     p.subtitle Наша точка на карте 55.802489, 37.430614  - Плавдом на воде.
   <iframe class="map__ymaps" src="https://yandex.ru/map-widget/v1/?um=constructor%3A437ad9257d3af2ddfbc4bf24ee88e8867f8dac89d89e791a4951e7c74b260ffc&amp;source=constructor" width="100%" height="500" frameborder="0"></iframe>
   .container
-    .map__wrapper
-      a(href="#").map__img(data-open-modal="map")
+    .section__wrapper
+      a(href="#" title="Увеличить" data-open-modal="map").section__img.map__img
         +picture("content/map", "map", "png", 1091, 738, "Схема прохода в Школу Ветра")
+        +icon("icon-search", 24, 24).map__zoom-icon
       .map__info
         p.section__text.text Если Вы с водителем, или на такси, Вам нужна южная сторона Строгинского шоссе (та сторона, по которой Вы будете двигаться от МКАД к М. Щукинская), просто подъезжайте по адресу к воротам.
         strong.section__text.text.bold Внимание, парковки рядом с полуостровом нет (только осенью бывают свободные места перед воротами).
