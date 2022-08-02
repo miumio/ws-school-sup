@@ -1549,11 +1549,20 @@ button,
   transform: translateY(-50%);
 }
 
+.bold {
+  font-weight: 600;
+}
+
+.text {
+  margin: 0;
+  line-height: 1.5;
+}
+
 .container {
   width: 100%;
   max-width: 1920px;
   margin: 0 auto;
-  padding: 0 40px;
+  padding: 0 5%;
 }
 
 .header {
@@ -1772,12 +1781,14 @@ button,
 }
 
 .title--sm {
+  font-weight: 600;
   text-align: left;
   font-size: 1rem;
-  font-weight: 700;
+  text-transform: uppercase;
 }
 
 .subtitle {
+  margin: 0;
   text-align: center;
   text-transform: uppercase;
   font-weight: 300;
@@ -2355,12 +2366,12 @@ button,
 }
 
 .section__title {
-  margin: 1.5rem 0;
+  margin: 0 0 2rem;
 }
 
 .section__icon {
   position: absolute;
-  top: 0;
+  top: -20px;
   left: 50%;
   width: 200px;
   height: auto;
@@ -2369,8 +2380,12 @@ button,
   transform: translateX(-50%);
 }
 
+.section__text {
+  margin-bottom: 1rem;
+}
+
 .news-card__link::after {
-  content: " ↓";
+  content: "показать полностью ↓";
 }
 
 .news-card__title {
@@ -2399,6 +2414,7 @@ button,
   font-weight: 500;
   letter-spacing: 0.03rem;
   text-transform: uppercase;
+  font-weight: 700;
 }
 
 .news-card.is-open .news-card__text {
@@ -2430,6 +2446,55 @@ button,
 
 .news .swiper-pagination-bullet-active {
   border: 1px solid #2990cb;
+}
+
+.map {
+  padding-bottom: 0;
+}
+
+.map__wrapper {
+  padding: 2rem 0;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+  grid-template-columns: repeat(2, 1fr);
+  -webkit-column-gap: 32px;
+  -moz-column-gap: 32px;
+  column-gap: 32px;
+}
+
+.map__ymaps {
+  display: block;
+  padding-top: 2rem;
+}
+
+.map__list {
+  margin: 0;
+  padding-left: 1rem;
+}
+
+.map__title {
+  margin: 1rem 0;
+}
+
+.map__list-item {
+  margin-bottom: 0.5rem;
+}
+
+.map__images {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[4];
+  grid-template-columns: repeat(4, 1fr);
+  margin-bottom: 2rem;
+}
+
+.rent {
+  padding-top: 0;
+}
+
+.rent__img {
+  margin-bottom: 2rem;
 }
 
 /* @media (hover: hover), screen and (min-width: 0\0) {
@@ -2466,17 +2531,7 @@ button,
   }
 }
 
-@media (max-width: 1439px) {
-  .container {
-    padding: 0 32px;
-  }
-}
-
 @media (max-width: 1023px) {
-  .container {
-    padding: 0 24px;
-  }
-
   .main-nav__list {
     display: none;
   }
