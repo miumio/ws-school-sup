@@ -5,7 +5,7 @@ section.map.section#map
   <iframe class="map__ymaps" src="https://yandex.ru/map-widget/v1/?um=constructor%3A437ad9257d3af2ddfbc4bf24ee88e8867f8dac89d89e791a4951e7c74b260ffc&amp;source=constructor" width="100%" height="500" frameborder="0"></iframe>
   .container
     .map__wrapper
-      .map__img.aspect-ratio
+      a(href="#").map__img(data-open-modal="map")
         +picture("content/map", "map", "png", 1091, 738, "Схема прохода в Школу Ветра")
       .map__info
         p.section__text.text Если Вы с водителем, или на такси, Вам нужна южная сторона Строгинского шоссе (та сторона, по которой Вы будете двигаться от МКАД к М. Щукинская), просто подъезжайте по адресу к воротам.
@@ -19,15 +19,5 @@ section.map.section#map
           li.map__list-item на платной парковке за ДПС ГИБДД УВД по СЗАО <span class="bold">55.805047, 37.422118 (200 р в сутки, места есть всегда),
           li.map__list-item на площадке у трансформаторной подстанции (ТП) на северной стороне шоссе рядом с мостом (места на ~15 машин), <span class="bold">55.805001, 37.433850</span>;
           li.map__list-item на парковке под мостом (от М. Щукинская сразу направо после моста), <span class="bold">55.805511, 37.444359</span>.
-
-    ul.map__images.list-reset
-      li.aspect-ratio
-        +picture("content/map", "map-1", "jpg", 1024, 768, "Схема прохода в Школу Ветра")
-      li.aspect-ratio
-        +picture("content/map", "map-2", "jpg", 1024, 768, "Схема прохода в Школу Ветра")
-      li.aspect-ratio
-        +picture("content/map", "map-3", "jpg", 1024, 768, "Схема прохода в Школу Ветра")
-      li.aspect-ratio
-        +picture("content/map", "map-4", "jpg", 870, 576, "Схема прохода в Школу Ветра")
 
 

@@ -27,4 +27,14 @@ export const initNewsSwiper = () => {
       },
     },
   });
+  // eslint-disable-next-line
+  let mapSwiper = new Swiper('[data-map-swiper]', {
+    direction: 'horizontal',
+    slideToClickedSlide: true,
+    a11y: {
+      prevSlideMessage: 'Предыдущий слайд',
+      nextSlideMessage: 'Следующий слайд',
+    },
+    allowTouchMove: true,
+  });
 };
