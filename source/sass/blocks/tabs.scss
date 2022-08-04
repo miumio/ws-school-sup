@@ -1,17 +1,30 @@
 .tabs {
   margin-top: 50px;
   max-width: 100%;
+
+  @include vp-767 {
+    max-width: unset;
+  }
 }
 
 .tabs__controls {
   display: flex;
   width: 100%;
   margin-bottom: 2rem;
+
+  @include vp-767 {
+    flex-direction: column;
+  }
 }
 
 .tabs__control {
   text-transform: uppercase;
   flex: 1 0 auto;
+
+  @include vp-767 {
+    padding: 0.5rem 1rem;
+  }
+
 
   &.is-active {
     color: $color-blue;
@@ -20,12 +33,14 @@
 }
 
 .tabs__content {
-  margin-bottom: 40px;
-
   transition: height 0.3s;
 }
 
 .tabs__element {
   padding: 10px;
   width: 100%;
+
+  @include vp-767 {
+    padding: 0;
+  }
 }

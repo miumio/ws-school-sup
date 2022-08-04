@@ -2650,7 +2650,6 @@ button,
 }
 
 .tabs__content {
-  margin-bottom: 40px;
   -webkit-transition: height 0.3s;
   -o-transition: height 0.3s;
   transition: height 0.3s;
@@ -2678,6 +2677,10 @@ button,
   background-color: #17171B;
 }
 
+.price {
+  padding-bottom: 0;
+}
+
 .price .table {
   margin-bottom: 3rem;
 }
@@ -2694,6 +2697,13 @@ button,
 .price__note {
   font-size: 0.9rem;
   color: #333333;
+}
+
+.travel__cover img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
 }
 
 /* @media (hover: hover), screen and (min-width: 0\0) {
@@ -2764,6 +2774,8 @@ button,
   .intro__title {
     position: unset;
     background: none;
+    padding: 0;
+    padding-top: 1rem;
     font-size: 1.4rem;
   }
 
@@ -2783,25 +2795,93 @@ button,
   }
 
   .modal__wrapper {
-    padding: 60px 16px;
+    padding: 0;
   }
 
   .modal__content {
     width: 100%;
-    padding: 20px;
+  }
+
+  .modal__icon {
+    display: none;
+  }
+
+  .modal__close-btn {
+    top: -50px;
+    right: 0;
   }
 
   .modal--fit-content .modal__content {
     width: 100%;
   }
 
+  .submenu__item {
+    padding-right: 0;
+  }
+
+  .submenu__item:first-child {
+    margin-right: auto;
+  }
+
   .submenu__adress {
-    padding-top: 5px;
+    padding-top: 1rem;
     min-width: 100%;
     text-align: left;
   }
 
+  .intro__heading {
+    font-size: 4rem;
+  }
+
+  .intro__subtitle {
+    max-width: unset;
+    font-size: 1rem;
+  }
+
+  .section {
+    padding: 2rem 0;
+  }
+
+  .section__wrapper {
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+    padding-bottom: 0;
+  }
+
   .news-card__text {
     -webkit-line-clamp: 3;
+  }
+
+  .map__zoom-icon {
+    width: 48px;
+    height: 48px;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
+
+  .tabs {
+    max-width: unset;
+  }
+
+  .tabs__controls {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+
+  .tabs__control {
+    padding: 0.5rem 1rem;
+  }
+
+  .tabs__element {
+    padding: 0;
+  }
+
+  .table {
+    overflow-y: auto;
   }
 }
