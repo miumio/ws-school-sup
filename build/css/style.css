@@ -1543,7 +1543,7 @@ button,
   position: relative;
   height: 0;
   padding-top: 64.94624%;
-  background-color: #17171B;
+  background-color: #333333;
   overflow: hidden;
 }
 
@@ -1655,6 +1655,10 @@ button,
   padding: 40px 0;
   color: #ffffff;
   background-color: #17171B;
+}
+
+.footer .submenu__adress {
+  font-size: inherit;
 }
 
 .modal {
@@ -2377,8 +2381,8 @@ button,
 }
 
 .swiper .swiper-slide img {
-  width: 100%;
-  height: 100%;
+  width: 102%;
+  height: 102%;
   -o-object-fit: cover;
   object-fit: cover;
 }
