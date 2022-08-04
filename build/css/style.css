@@ -2794,6 +2794,10 @@ button,
     padding-right: 16px;
   }
 
+  .main-nav {
+    padding-bottom: 0;
+  }
+
   .modal__wrapper {
     padding: 0;
   }
@@ -2831,6 +2835,7 @@ button,
 
   .intro__heading {
     font-size: 4rem;
+    padding-bottom: 1rem;
   }
 
   .intro__subtitle {
@@ -2875,6 +2880,18 @@ button,
 
   .tabs__control {
     padding: 0.5rem 1rem;
+    -webkit-transition: -webkit-transform 0.3s ease;
+    transition: -webkit-transform 0.3s ease;
+    -o-transition: transform 0.3s ease;
+    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+  }
+
+  .tabs__control.is-active {
+    font-weight: 700;
+    -webkit-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    transform: scale(1.2);
   }
 
   .tabs__element {

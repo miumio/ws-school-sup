@@ -23,12 +23,18 @@
 
   @include vp-767 {
     padding: 0.5rem 1rem;
+    transition: transform $trans-default;
   }
 
 
   &.is-active {
     color: $color-blue;
     pointer-events: none;
+
+    @include vp-767 {
+      font-weight: 700;
+      transform: scale(1.2);
+    }
   }
 }
 
