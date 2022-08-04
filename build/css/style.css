@@ -1301,6 +1301,14 @@ button.swiper-pagination-bullet {
   src: url("../fonts/open-sans-800.woff2") format("woff2"), url("../fonts/open-sans-800.woff") format("woff");
 }
 
+@font-face {
+  font-style: normal;
+  font-weight: 300;
+  font-family: "Poppins";
+  font-display: swap;
+  src: url("../fonts/poppins-300.woff2") format("woff2"), url("../fonts/poppins-300.woff") format("woff");
+}
+
 *,
 *::before,
 *::after {
@@ -2359,6 +2367,7 @@ button,
   font-weight: 300;
   font-size: 8rem;
   line-height: 1.1;
+  font-family: "Poppins", "Arial", "Verdana", sans-serif;
 }
 
 .intro__subtitle {
