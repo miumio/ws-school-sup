@@ -3,6 +3,6 @@ mixin news-card(data)
   article.news-card(data-toggle)
     .news-card__cover.aspect-ratio
       +picture("content/news", data.img.name, "jpg", data.img.width, data.img.height, data.title)
-    h2.news-card__title.title.title--sm !{data.title}
+    h2.news-card__title.title.title--xs !{data.title}
     p.news-card__text !{data.text}
     button(type="button" data-toggle-button).news-card__link.link.btn-reset

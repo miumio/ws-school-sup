@@ -1,0 +1,103 @@
+section.section.price#price
+  .container
+    +icon("icon-wave", 270, 60).section__icon
+    h2.section__title.title.title--md Цены
+    p.price__title.title #[span.bold Акция] НАЧНИ ДЕНЬ С SUP!
+    p.subtitle.
+      Вы можете взять в аренду два SUP в будний день в интервале с 7:30 до 9:00, в выходной с 8:00 до 9:00 по супер-цене.
+      Стоимость двух часов проката двух досок SUP 50% обычной цены (1400 р. в будни, 2000 - в выходной).
+      Стоимость двух часов проката по акции одной доски SUP 800 р. в будни, 1400 - в выходной.
+
+    .tabs(data-tabs="parent" data-delay="300")
+      .tabs__controls(data-tabs="controls")
+        button(type="button" data-tabs="control").tabs__control.btn-reset.title.title--sm Почасовая АРЕНДА SUP
+        button(type="button" data-tabs="control").tabs__control.btn-reset.title.title--sm Посуточная АРЕНДА SUP
+        button(type="button" data-tabs="control").tabs__control.btn-reset.title.title--sm SUP обучение
+      .tabs__content(data-tabs="content")
+        .tabs__element(data-tabs="element")
+          h3.title.title--xs Низкий сезон (май&nbsp;&mdash; июня, сентябрь&nbsp;&mdash; ноябрь)
+          .table
+            table
+              thead
+                tr
+                  th
+                  th Будни (до 21:00 (кроме пт с 17:00))
+                  th Выходной (будни после 21:00, и пт с 17:00)
+              tbody
+                tr
+                  td НАДУВНОЙ САП
+                  td #[span.bold 800 р.] первый час, далее: #[span.bold 600/300/300/100]
+                  td #[span.bold 1200 р.] первый час, далее: #[span.bold 800/500*/500*/400*].
+                tr
+                  td ЖЕСТКИЙ САП
+                  td #[span.bold 900 р.] первый час, далее&nbsp;#[span.bold 600/400/400/100];
+                  td #[span.bold 1400 р.] первый час, далее:&nbsp;#[span.bold 800/500/500/400*]
+                tr
+                  td ГОНОЧНЫЙ САП
+                  td(colspan="2") #[span.bold +200 р./ч] к тарифу прогулочного надувного САП
+
+          h3.title.title--xs Высокий сезон (в 2022 году&nbsp;&mdash; с июля)
+          .table
+            table
+              thead
+                tr
+                  th
+                  th будний день до 18:00
+                  th будний день с 18:00
+                  th выходной день и пт с 17:00:
+              tbody
+                tr
+                  td НАДУВНОЙ САП
+                  td #[span.bold 800 р.] первый час, далее:&nbsp;#[span.bold 600]
+                  td #[span.bold 1000 р.] первый час, далее:&nbsp;#[span.bold 600]
+                  td #[span.bold 1200 р.] первый час, далее:&nbsp;#[span.bold 1000]
+                tr
+                  td ЖЕСТКИЙ САП
+                  td #[span.bold 900 р.] первый час, далее:&nbsp;#[span.bold 600]
+                  td #[span.bold 1000 р.] первый час, далее:&nbsp;#[span.bold 600]
+                  td #[span.bold 1400 р.] первый час, далее:&nbsp;#[span.bold 1000]
+                tr
+                  td Углепластиковое весло
+                  td(colspan="3") #[span.bold +300/100/100]
+                tr
+                  td(colspan="4") Использование одной доски САП, или каноэ на двоих #[span.bold +50%], дополнительное весло #[span.bold +300 р/час]
+
+          p.text.price__note.
+            * Внимание, в высокий сезон (с 15.06) регрессивная стоимость 3-го и последующих часов аренды в выходные дни не работает.
+            В низкий сезон возможно взять доску и увезти ее, чтобы заниматься SUP серфингом не в Строгинском затоне, а на другом водоеме (залог за надувной САП ОТ 40 т. р.). Стоимость посуточной аренды SUP.
+
+        .tabs__element(data-tabs="element")
+          .table
+            table
+              thead
+                tr
+                  th
+                  th сутки
+                  th двое суток
+                  th без выезда с 9:00 до 20:00
+              tbody
+                tr
+                  td Будний день
+                  td #[span.bold 3000 р.]
+                  td #[span.bold 5000 р.]
+                  td #[span.bold 2500 р.]
+                tr
+                  td Выходной день
+                  td #[span.bold 5000 р.]
+                  td(colspan="2") два выходных дня подряд #[span.bold 8000 р.]
+          p.text.price__note Залог за надувную САП доску и весло, если вы увозите оборудование,  от 27 000 р.
+          p.text.price__note.
+            Аренда САП доски на сутки предполагает, что Вы сами сдуваете и упаковываете надувной SUP, когда увозите его, и самостоятельно накачиваете, когда привозите.
+            Услуга по подготовке SUP стоит дополнительные 600 р.
+          p.text.price__note.
+            Друзья, не обижайтесь, если в преддверии жарких выходных, мы откажем вам в аренде доски на сутки. У нас сейчас 47 досок для SUP серфинга, но все они бронируются накануне выходных.
+
+        .tabs__element(data-tabs="element")
+          h3.title.title--xs Расписание групповых занятий по SUP-серфингу в SUP Zone:
+
+          p.text.price__note #[span.bold Будние дни] 16:00, 18:00
+          p.text.price__note #[span.bold Суббота и воскресенье]  12:00, 15:00
+          p.text.price__note Запись на занятия  по тел. и Whatsapp #[span.bold +79778100718, Александр].
+
+          p.text.price__note Записываясь на занятие, вы вносите депозит #[span.bold 1001 р.]
+
