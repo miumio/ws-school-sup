@@ -30,10 +30,10 @@ mixin header(headerMods, currentUrl)
       else
         a.header__logo(href="index.html" aria-label="Переход на главную") Логотип
       nav.main-nav
-        button.main-nav__toggle.toggle.btn-reset(type="button" aria-label="Переключатель отображения меню" aria-pressed="false")
+        button.main-nav__toggle.toggle.btn-reset(type="button" aria-label="Переключатель отображения меню" aria-pressed="false", data-toggler)
           span.toggle__line
           span.toggle__line
-        .main-nav__wrapper
+        .main-nav__wrapper.no-scrollbar
           ul.main-nav__list.list-reset(role="list")
             each link in headerLinks
               - const activeState = currentUrl === link.href
@@ -41,5 +41,5 @@ mixin header(headerMods, currentUrl)
                 if(activeState)
                   span.main-nav__link.is-active=link.text
                 else
-                  a.main-nav__link.link(href=link.href)=link.text
+                  a.main-nav__link.link(href=link.href, data-toggler)=link.text
     +submenu().header__row.header__submenu
