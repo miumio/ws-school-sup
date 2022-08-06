@@ -13,5 +13,7 @@
     height: 1px;
 
     background-color: $color-default-black;
+    transform-origin: center;
+    transition: transform $trans-default;
   }
 }

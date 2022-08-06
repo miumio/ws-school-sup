@@ -4,8 +4,34 @@
 
   font-weight: 600;
 
-  @include vp-767 {
+  @include vp-1023 {
     padding-bottom: 0;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .main-nav__wrapper {
+    @include vp-1023 {
+      display: flex;
+      flex-direction: column;
+      position: absolute;
+      top: 82px;
+      right: 0;
+      left: 0;
+      visibility: hidden;
+      opacity: 0;
+      width: 0;
+      max-height: 0;
+      background-color: $color-default-white;
+      z-index: 1000;
+      transition: max-height $trans-default opacity $trans-default;
+      overflow: hidden;
+    }
+
+    @include vp-767 {
+      padding: 1rem 0;
+      overflow: auto;
+    }
   }
 
   &__list {
@@ -16,7 +42,18 @@
     margin-right: -16px;
 
     @include vp-1023 {
-      display: none;
+      justify-content: center;
+    }
+
+    @include vp-767 {
+      flex-wrap: nowrap;
+      min-width: min-content;
+    }
+  }
+
+  &__item {
+    @include vp-1023 {
+      padding: 1rem 0;
     }
   }
 
@@ -33,6 +70,28 @@
 
     @include vp-1023 {
       display: flex;
+    }
+  }
+
+  &.is-open {
+    .toggle__line:first-child {
+      transform: rotate(45deg) translate(6px, 6px);
+    }
+
+    .toggle__line:last-child {
+      transform: rotate(-45deg) translate(6px, -6px);
+    }
+
+    .main-nav__wrapper {
+      visibility: visible;
+      opacity: 1;
+      width: auto;
+      min-width: 200px;
+      max-height: 1000px;
+    }
+
+    .main-nav__toggle {
+      z-index: 10000;
     }
   }
 }

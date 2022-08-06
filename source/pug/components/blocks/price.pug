@@ -9,10 +9,12 @@ section.section.price#price
       Стоимость двух часов проката по акции одной доски SUP 800 р. в будни, 1400 - в выходной.
 
     .tabs(data-tabs="parent" data-delay="300")
-      .tabs__controls(data-tabs="controls")
+      .tabs__controls(data-tabs="controls").no-scrollbar
         button(type="button" data-tabs="control").tabs__control.btn-reset.title.title--sm Почасовая АРЕНДА SUP
         button(type="button" data-tabs="control").tabs__control.btn-reset.title.title--sm Посуточная АРЕНДА SUP
         button(type="button" data-tabs="control").tabs__control.btn-reset.title.title--sm SUP обучение
+      .tabs__icon
+        +icon("icon-swipe", 60, 60)
       .tabs__content(data-tabs="content")
         .tabs__element(data-tabs="element")
           h3.title.title--xs Высокий сезон (в 2022 году&nbsp;&mdash; с июля)

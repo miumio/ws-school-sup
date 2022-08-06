@@ -13,11 +13,11 @@ export const initSwipers = () => {
       nextEl: '[data-swiper] .swiper-button-next',
       prevEl: '[data-swiper] .swiper-button-prev',
     },
-    // autoplay: {
-    //   delay: 4000,
-    //   waitForTransition: true,
-    //   disableOnInteraction: false,
-    // },
+    autoplay: {
+      delay: 4000,
+      waitForTransition: true,
+      disableOnInteraction: false,
+    },
     pagination: {
       el: '.swiper-pagination',
       clickable: true,

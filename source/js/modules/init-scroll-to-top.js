@@ -1,5 +1,6 @@
 export const initScrollToTop = () => {
   const scrollToTopButton = document.querySelector('[data-scroll]');
+  const breakpoint = window.matchMedia('(min-width:1023px)');
 
   if (!scrollToTopButton) {
     return;
@@ -23,8 +24,15 @@ export const initScrollToTop = () => {
     window.scrollTo({top: 0, behavior: 'smooth'});
   };
 
-  scrollToTopButton.onclick = function (e) {
-    e.preventDefault();
-    scrollToTop();
-  };
+  // scrollToTopButton.onclick = function (e) {
+  //   e.preventDefault();
+  //   scrollToTop();
+  // };
+
+  document.addEventListener('click', (ev) => {
+    if (ev.target.closest('.scroll-button') && breakpoint.matches) {
+      scrollToTop();
+    }
+  });
+
 };
