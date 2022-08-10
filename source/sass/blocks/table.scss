@@ -1,11 +1,32 @@
 .table {
   @include vp-767 {
     overflow-y: auto;
+    font-size: 14px;
   }
 
   table {
-    width: 100%;
+    display: flex;
+    overflow: hidden;
+  }
 
+  tbody {
+    display: flex;
+    overflow: auto;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+
+  thead {
+    display: flex;
+  }
+
+  tr {
+    display: flex;
+    flex-direction: column;
   }
 
   th,
@@ -19,10 +40,26 @@
   }
 
   th {
+    min-height: 37px;
+  }
+
+  th {
+    text-align: left;
+    text-transform: uppercase;
+
+    @include vp-767 {
+      padding: 8px;
+      text-transform: capitalize;
+    }
+  }
+
+  th:first-child,
+  td:first-child {
     font-weight: 500;
-    font-size: 1rem;
     text-transform: uppercase;
     color: $color-default-white;
+
+    white-space: nowrap;
 
     background-color: $color-default-black;
 
@@ -30,5 +67,6 @@
       text-transform: lowercase;
     }
 
+    border-right: 1px solid $color-default-white;
   }
 }

@@ -1823,10 +1823,6 @@ button,
   font-size: 2.5rem;
 }
 
-.title--md {
-  font-size: 2.5rem;
-}
-
 .title--sm {
   font-weight: 500;
   font-size: 1.2rem;
@@ -2705,7 +2701,39 @@ button,
 }
 
 .table table {
-  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  overflow: hidden;
+}
+
+.table tbody {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  overflow: auto;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.table tbody::-webkit-scrollbar {
+  display: none;
+}
+
+.table thead {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.table tr {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
 }
 
 .table th,
@@ -2714,11 +2742,22 @@ button,
 }
 
 .table th {
+  min-height: 37px;
+}
+
+.table th {
+  text-align: left;
+  text-transform: uppercase;
+}
+
+.table th:first-child,
+.table td:first-child {
   font-weight: 500;
-  font-size: 1rem;
   text-transform: uppercase;
   color: #ffffff;
+  white-space: nowrap;
   background-color: #17171B;
+  border-right: 1px solid #ffffff;
 }
 
 .price {
@@ -2918,6 +2957,14 @@ button,
     width: 100%;
   }
 
+  .title--md {
+    font-size: 2rem;
+  }
+
+  .title--sm {
+    font-size: 1rem;
+  }
+
   .submenu__item {
     padding-right: 0;
   }
@@ -2973,6 +3020,15 @@ button,
 
   .tabs {
     max-width: unset;
+    margin: 50px -16px 0;
+  }
+
+  .tabs .table {
+    padding-left: 16px;
+  }
+
+  .tabs .table tbody {
+    padding-right: 16px;
   }
 
   .tabs__icon {
@@ -2985,6 +3041,14 @@ button,
   .tabs__icon svg {
     width: 100%;
     height: 100%;
+  }
+
+  .tabs__controls {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    padding: 0 1rem;
   }
 
   .tabs__control {
@@ -3001,6 +3065,7 @@ button,
 
   .table {
     overflow-y: auto;
+    font-size: 14px;
   }
 
   .table th,
@@ -3010,6 +3075,12 @@ button,
   }
 
   .table th {
+    padding: 8px;
+    text-transform: capitalize;
+  }
+
+  .table th:first-child,
+  .table td:first-child {
     text-transform: lowercase;
   }
 }

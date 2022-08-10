@@ -7,15 +7,19 @@
 
   &--md {
     font-size: 2.5rem;
-  }
 
-  &--md {
-    font-size: 2.5rem;
+    @include vp-767 {
+      font-size: 2rem;
+    }
   }
 
   &--sm {
     font-weight: 500;
     font-size: 1.2rem;
+
+    @include vp-767 {
+      font-size: 1rem;
+    }
   }
 
   &--xs {
