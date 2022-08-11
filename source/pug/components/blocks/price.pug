@@ -3,10 +3,10 @@ section.section.price#price
     +icon("icon-wave", 270, 60).section__icon
     h2.section__title.title.title--md Цены
     p.price__title.title #[span.bold Акция] НАЧНИ ДЕНЬ С&nbsp;SUP!
-    p.subtitle.
-      Вы можете взять в аренду два SUP в будний день в интервале с 7:30 до 9:00, в выходной с 8:00 до 9:00 по супер-цене.
-      Стоимость двух часов проката двух досок SUP 50% обычной цены (1400 р. в будни, 2000 - в выходной).
-      Стоимость двух часов проката по акции одной доски SUP 800 р. в будни, 1400 - в выходной.
+    p.price__subtitle.subtitle.
+      Вы&nbsp;можете взять в&nbsp;аренду два SUP в&nbsp;будний день в&nbsp;интервале с&nbsp;7:30 до&nbsp;9:00, в&nbsp;выходной с&nbsp;8:00 до&nbsp;9:00 по&nbsp;супер-цене.
+      Стоимость двух часов проката двух досок SUP&nbsp;50% обычной цены (1400&nbsp;р.&nbsp;в&nbsp;будни, 2000&nbsp;&mdash; в&nbsp;выходной).
+      Стоимость двух часов проката по&nbsp;акции одной доски SUP 800&nbsp;р.&nbsp;в&nbsp;будни, 1400&nbsp;&mdash; в&nbsp;выходной.
 
     .tabs(data-tabs="parent" data-delay="300")
       .tabs__controls(data-tabs="controls").no-scrollbar
@@ -17,55 +17,64 @@ section.section.price#price
         +icon("icon-swipe", 60, 60)
       .tabs__content(data-tabs="content")
         .tabs__element(data-tabs="element")
-          h3.title.title--xs Высокий сезон (в 2022 году&nbsp;&mdash; с июля)
           .table.no-scrollbar
+            h3.table__title.title.title--xs Высокий сезон (в 2022 году&nbsp;&mdash; с&nbsp;июля)
             table
               thead
                 tr
                   th
                   th Надувной сап
                   th Жесктий сап
-                  th
               tbody
                 tr
-                  td БУДНИЙ ДЕНЬ ДО 20:00
+                  th БУДНИ ДО 20:00
                   td #[span.bold 800 р.] первый час, далее:&nbsp;#[span.bold 600]
                   td #[span.bold 900 р.] первый час, далее:&nbsp;#[span.bold 600]
                 tr
-                  td БУДНИЙ ДЕНЬ C 20:00
+                  th БУДНИ C 20:00
                   td #[span.bold 1000 р.] первый час, далее:&nbsp;#[span.bold 600]
                   td #[span.bold 1000 р.] первый час, далее:&nbsp;#[span.bold 600]
                 tr
-                  td выходной день и пт с 17:00
+                  th выходной и пт с 17:00
                   td #[span.bold 1200 р.] первый час, далее:&nbsp;#[span.bold 1000]
                   td #[span.bold 1400 р.] первый час, далее:&nbsp;#[span.bold 1000]
+            .table__note
+              h3.title.title--xs Гоночный сап
+              p.text #[span.bold +200 р./ч] к тарифу прогулочного надувного САП
+            .table__note
+              h3.title.title--xs Углепластиковое весло
+              p.text.bold +300/100/100
 
-
-
-          h3.title.title--xs Низкий сезон (май&nbsp;&mdash; 15 июня, сентябрь&nbsp;&mdash; ноябрь)
           .table.no-scrollbar
+            h3.table__title.title.title--xs Низкий сезон (май&nbsp;&mdash; 15 июня, сентябрь&nbsp;&mdash; ноябрь)
             table
               thead
                 tr
                   th
-                  th Будни (до 21:00 (кроме пт с 17:00))
-                  th Выходной (будни после 21:00, и пт с 17:00)
+                  th Надувной сап
+                  th Жесктий сап
               tbody
                 tr
-                  td НАДУВНОЙ САП
-                  td #[span.bold 800 р.] первый час, далее: #[span.bold 600/300/300/100]
-                  td #[span.bold 1200 р.] первый час, далее: #[span.bold 800/500*/500*/400*].
+                  th БУДНИ ДО 21:00
+                  td #[span.bold 800 р.] первый час, далее:&nbsp;#[span.bold 600/300/300/100]
+                  td #[span.bold 900 р.] первый час, далее:&nbsp;#[span.bold 600/400/400/100]
                 tr
-                  td ЖЕСТКИЙ САП
-                  td #[span.bold 900 р.] первый час, далее&nbsp;#[span.bold 600/400/400/100];
+                  th ВЫХОДНОЙ, БУДНИ ПОСЛЕ 21:00 И ПТ С 17:00
+                  td #[span.bold 1200 р.] первый час, далее:&nbsp;#[span.bold 800/500*/500*/400*]
                   td #[span.bold 1400 р.] первый час, далее:&nbsp;#[span.bold 800/500/500/400*]
-                tr
-                  td ГОНОЧНЫЙ САП
-                  td(colspan="2") #[span.bold +200 р./ч] к тарифу прогулочного надувного САП
+
+            .table__note
+              h3.title.title--xs Гоночный сап
+              p.text #[span.bold +200 р./ч] к тарифу прогулочного надувного САП
+            .table__note
+              h3.title.title--xs Углепластиковое весло
+              p.text.bold +300/100/100
 
           p.text.price__note.
-            * Внимание, в высокий сезон (с 15.06) регрессивная стоимость 3-го и последующих часов аренды в выходные дни не работает.
-            В низкий сезон возможно взять доску и увезти ее, чтобы заниматься SUP серфингом не в Строгинском затоне, а на другом водоеме (залог за надувной САП ОТ 40 т. р.). Стоимость посуточной аренды SUP.
+            * Внимание, в&nbsp;высокий сезон (с&nbsp;15.06) регрессивная стоимость 3-го и&nbsp;последующих
+            часов аренды в&nbsp;выходные дни не&nbsp;работает. В&nbsp;низкий сезон возможно взять доску
+            и&nbsp;увезти&nbsp;ее, чтобы заниматься SUP серфингом не&nbsp;в&nbsp;Строгинском затоне,
+            а&nbsp;на&nbsp;другом водоеме (залог за&nbsp;надувной САП ОТ&nbsp;40&nbsp;т.&nbsp;р.).
 
         .tabs__element(data-tabs="element")
           .table.no-scrollbar
@@ -73,32 +82,34 @@ section.section.price#price
               thead
                 tr
                   th
-                  th сутки
-                  th двое суток
-                  th без выезда с 9:00 до 20:00
+                  th Будний день
+                  th Выходной день
               tbody
                 tr
-                  td Будний день
+                  th сутки
                   td #[span.bold 3000 р.]
                   td #[span.bold 5000 р.]
-                  td #[span.bold 2500 р.]
                 tr
-                  td Выходной день
+                  th двое суток
                   td #[span.bold 5000 р.]
-                  td(colspan="2") два выходных дня подряд #[span.bold 8000 р.]
-          p.text.price__note Залог за надувную САП доску и весло, если вы увозите оборудование,  от 27 000 р.
+                  td два выходных дня подряд #[span.bold 8000 р.]
+                tr
+                  th БЕЗ ВЫЕЗДА С 9:00 ДО 20:00
+                  td #[span.bold 2500 р.]
+                  td
+
+          p.text.price__note Залог за надувную САП доску и весло, если вы увозите оборудование,  от 40 000 р.
           p.text.price__note.
             Аренда САП доски на сутки предполагает, что Вы сами сдуваете и упаковываете надувной SUP, когда увозите его, и самостоятельно накачиваете, когда привозите.
             Услуга по подготовке SUP стоит дополнительные 600 р.
           p.text.price__note.
-            Друзья, не обижайтесь, если в преддверии жарких выходных, мы откажем вам в аренде доски на сутки. У нас сейчас 47 досок для SUP серфинга, но все они бронируются накануне выходных.
+            У нас сейчас 47 досок для SUP серфинга, но в жаркую погоду бывает. что все они бронируются накануне выходных.
 
         .tabs__element(data-tabs="element")
-          h3.title.title--xs Расписание групповых занятий по SUP-серфингу в SUP Zone:
-
-          p.text.price__note #[span.bold Будние дни] 16:00, 18:00
-          p.text.price__note #[span.bold Суббота и воскресенье]  12:00, 15:00
-          p.text.price__note Запись на занятия  по тел. и Whatsapp #[span.bold +79778100718, Александр].
-
-          p.text.price__note Записываясь на занятие, вы вносите депозит #[span.bold 1001 р.]
+          p.text.price__note Будни в группе 4-10 чел #[span.bold 2500 руб./чел] Начало в 8:00; 18:00
+          p.text.price__note Будни индивидуально и в мини-группе до 3 чел #[span.bold 3500 руб./чел] Пн.-Пт. по предварительной договоренности.
+          p.text.price__note Выходные,  в группе 4-10 чел #[span.bold 3000 руб./чел] Начало в 10:00; 14:00
+          p.text.price__note Выходные индивидуально и в мини-группе до 3 чел #[span.bold 4000 руб./чел]
+          p.text.price__note.bold Время по предварительной договоренности
+          p.text.price__note.bold Запись по Ватсапп админа #[a(href="https://api.whatsapp.com/send?phone=79588136729") +79588136729] и по Ватсапп инструктора +79166089172
 

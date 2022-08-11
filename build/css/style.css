@@ -1543,7 +1543,7 @@ button,
   position: relative;
   height: 0;
   padding-top: 64.94624%;
-  background-color: #333333;
+  background-color: #48495f;
   overflow: hidden;
 }
 
@@ -1712,7 +1712,6 @@ button,
   align-items: center;
   width: 100%;
   min-height: 100%;
-  padding: 60px 40px;
 }
 
 .modal__overlay {
@@ -1816,6 +1815,7 @@ button,
   text-align: center;
   letter-spacing: 0.05em;
   font-weight: 300;
+  line-height: 1.5;
   text-transform: uppercase;
 }
 
@@ -1832,6 +1832,7 @@ button,
   font-weight: 600;
   text-align: left;
   font-size: 1rem;
+  letter-spacing: 0.02em;
 }
 
 .subtitle {
@@ -2473,6 +2474,7 @@ button,
 
 .news-card__title {
   padding: 0.8rem 0 0.5rem;
+  line-height: 1.3;
 }
 
 .news-card__text {
@@ -2497,6 +2499,11 @@ button,
   font-weight: 500;
   letter-spacing: 0.03rem;
   text-transform: uppercase;
+  font-weight: 700;
+}
+
+.news-card time {
+  font-size: 0.9rem;
   font-weight: 700;
 }
 
@@ -2660,8 +2667,11 @@ button,
 }
 
 .tabs {
-  margin-top: 50px;
   max-width: 100%;
+}
+
+.tabs .table {
+  margin-bottom: 2rem;
 }
 
 .tabs__icon {
@@ -2696,8 +2706,24 @@ button,
 }
 
 .tabs__element {
-  padding: 10px;
   width: 100%;
+}
+
+.table__title {
+  margin-bottom: 1rem;
+  letter-spacing: 0;
+}
+
+.table__note {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0.5rem 0;
+}
+
+.table__note .title {
+  padding-right: 1rem;
+  letter-spacing: 0;
 }
 
 .table table {
@@ -2705,13 +2731,37 @@ button,
   display: -ms-flexbox;
   display: flex;
   overflow: hidden;
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+.table thead {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 0;
+  -ms-flex: 0;
+  flex: 0;
+}
+
+.table thead th {
+  padding-left: 0;
+  -ms-flex-item-align: stretch;
+  -ms-grid-row-align: stretch;
+  align-self: stretch;
+  -webkit-box-flex: 1;
+  -ms-flex: 1 0 auto;
+  flex: 1 0 auto;
 }
 
 .table tbody {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  overflow: auto;
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
@@ -2720,52 +2770,48 @@ button,
   display: none;
 }
 
-.table thead {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+.table td {
+  padding: 0.5rem 1rem;
+  -ms-flex-item-align: stretch;
+  -ms-grid-row-align: stretch;
+  align-self: stretch;
+  -webkit-box-flex: 1;
+  -ms-flex: 1 0 auto;
+  flex: 1 0 auto;
 }
 
 .table tr {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
 }
 
-.table th,
-.table td {
+.table th {
   padding: 0.5rem 1rem;
-}
-
-.table th {
-  min-height: 37px;
-}
-
-.table th {
   text-align: left;
   text-transform: uppercase;
+  font-weight: 500;
+  min-height: 2.3rem;
+  white-space: nowrap;
 }
 
-.table th:first-child,
-.table td:first-child {
+.table th:first-child {
   font-weight: 500;
   text-transform: uppercase;
   color: #ffffff;
-  white-space: nowrap;
   background-color: #17171B;
   border-right: 1px solid #ffffff;
 }
 
 .price {
   padding-bottom: 0;
-}
-
-.price .table {
-  margin-bottom: 3rem;
 }
 
 .price .text:not(:last-of-type) {
@@ -2777,9 +2823,13 @@ button,
   margin-bottom: 1rem;
 }
 
+.price__subtitle {
+  margin-bottom: 2rem;
+}
+
 .price__note {
   font-size: 0.9rem;
-  color: #333333;
+  color: #48495f;
 }
 
 .travel__cover img {
@@ -2830,7 +2880,17 @@ button,
   }
 }
 
+@media (max-width: 1439px) {
+  .container {
+    padding: 0 8%;
+  }
+}
+
 @media (max-width: 1023px) {
+  .container {
+    padding: 0 7%;
+  }
+
   .main-nav {
     padding-bottom: 0;
     display: -webkit-box;
@@ -2907,15 +2967,31 @@ button,
     font-size: 5rem;
   }
 
+  .tabs__icon {
+    display: block;
+    width: 60px;
+    height: 60px;
+    margin: 0 auto 0.5rem;
+  }
+
+  .tabs__icon svg {
+    width: 100%;
+    height: 100%;
+  }
+
   .tabs__controls {
     margin-bottom: 0;
+    overflow: auto;
+  }
+
+  .table tbody {
     overflow: auto;
   }
 }
 
 @media (max-width: 767px) {
   .container {
-    padding: 0 16px;
+    padding: 0 1rem;
   }
 
   .header__row {
@@ -2934,10 +3010,6 @@ button,
     min-width: -webkit-min-content;
     min-width: -moz-min-content;
     min-width: min-content;
-  }
-
-  .modal__wrapper {
-    padding: 0;
   }
 
   .modal__content {
@@ -2959,10 +3031,6 @@ button,
 
   .title--md {
     font-size: 2rem;
-  }
-
-  .title--sm {
-    font-size: 1rem;
   }
 
   .submenu__item {
@@ -3020,7 +3088,7 @@ button,
 
   .tabs {
     max-width: unset;
-    margin: 50px -16px 0;
+    margin: 0 -16px;
   }
 
   .tabs .table {
@@ -3031,56 +3099,44 @@ button,
     padding-right: 16px;
   }
 
-  .tabs__icon {
-    display: block;
-    width: 60px;
-    height: 60px;
-    margin: 0 auto;
-  }
-
-  .tabs__icon svg {
-    width: 100%;
-    height: 100%;
-  }
-
-  .tabs__controls {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    padding: 0 1rem;
-  }
-
   .tabs__control {
     padding: 0.5rem 1rem;
   }
 
-  .tabs__control.is-active {
-    font-weight: 700;
-  }
-
-  .tabs__element {
-    padding: 0;
-  }
-
   .table {
     overflow-y: auto;
-    font-size: 14px;
   }
 
-  .table th,
+  .table__title {
+    margin-bottom: 0.5rem;
+  }
+
+  .table thead th {
+    padding-right: 1rem;
+    white-space: unset;
+  }
+
   .table td {
     padding: 0.5rem;
-    font-size: 0.8rem;
   }
 
   .table th {
-    padding: 8px;
-    text-transform: capitalize;
+    padding: 0.5rem;
   }
 
-  .table th:first-child,
-  .table td:first-child {
+  .table th:first-child {
     text-transform: lowercase;
+  }
+
+  .price__note {
+    margin: 0 1rem;
+  }
+}
+
+@media (max-width: 374px) {
+  .table__note .title {
+    -webkit-box-flex: 0;
+    -ms-flex: 0;
+    flex: 0;
   }
 }

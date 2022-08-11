@@ -1,13 +1,14 @@
 .tabs {
-  margin-top: 50px;
   max-width: 100%;
 
   @include vp-767 {
     max-width: unset;
-    margin: 50px -16px 0;
+    margin: 0 -16px;
   }
 
   .table {
+    margin-bottom: 2rem;
+
     @include vp-767 {
       padding-left: 16px;
     }
@@ -22,11 +23,11 @@
   &__icon {
     display: none;
 
-    @include vp-767 {
+    @include vp-1023 {
       display: block;
       width: 60px;
       height: 60px;
-      margin: 0 auto;
+      margin: 0 auto 0.5rem;
 
       svg {
         width: 100%;
@@ -36,7 +37,6 @@
   }
 }
 
-
 .tabs__controls {
   display: flex;
   width: 100%;
@@ -45,11 +45,6 @@
   @include vp-1023 {
     margin-bottom: 0;
     overflow: auto;
-  }
-
-    @include vp-767 {
-    flex-direction: column;
-    padding: 0 1rem;
   }
 }
 
@@ -66,10 +61,6 @@
   &.is-active {
     color: $color-blue;
     pointer-events: none;
-
-    @include vp-767 {
-      font-weight: 700;
-    }
   }
 }
 
@@ -78,10 +69,5 @@
 }
 
 .tabs__element {
-  padding: 10px;
   width: 100%;
-
-  @include vp-767 {
-    padding: 0;
-  }
 }
