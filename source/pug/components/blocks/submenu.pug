@@ -1,14 +1,18 @@
-mixin submenu(icon=true)
+mixin submenu()
 
   ul.submenu.list-reset(role="list")&attributes(attributes)
     li.submenu__item
-      a(href="tel:+79166011546").link.submenu__tel.submenu__tel--main +7 916 601 1546
+      p.text Бронь САП
+        a(href="https://api.whatsapp.com/send?phone=79160284976").link
+          +icon("icons-whatsapp", 24, 24).submenu__icon
+        a(href="tel:+79160284976").link.submenu__tel.submenu__tel--main +7 916 028 4976
 
     li.submenu__item
-      a(href="tel:+79261739847").link.submenu__tel
-        if icon
+      p.text Администратор
+        a(href="https://api.whatsapp.com/send?phone=79588136729").link
           +icon("icons-whatsapp", 24, 24).submenu__icon
-        | +7 926 173 9847
+        a(href="tel:+79588136729").link.submenu__tel
+          | +7 958 813 6729
 
     li.submenu__item.submenu__adress
       a(href="#map").link

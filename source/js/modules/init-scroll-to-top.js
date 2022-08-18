@@ -18,16 +18,11 @@ export const initScrollToTop = () => {
     }
   };
 
-  window.addEventListener('scroll', scrollFunc);
+  window.addEventListener('scroll', scrollFunc, {passive: true});
 
   const scrollToTop = () => {
     window.scrollTo({top: 0, behavior: 'smooth'});
   };
-
-  // scrollToTopButton.onclick = function (e) {
-  //   e.preventDefault();
-  //   scrollToTop();
-  // };
 
   document.addEventListener('click', (ev) => {
     if (ev.target.closest('.scroll-button') && breakpoint.matches) {

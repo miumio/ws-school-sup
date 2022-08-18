@@ -5,6 +5,7 @@ export const initSwipers = () => {
     loop: true,
     direction: 'horizontal',
     effect: "fade",
+    lazy: true,
     a11y: {
       prevSlideMessage: 'Предыдущий слайд',
       nextSlideMessage: 'Следующий слайд',

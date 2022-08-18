@@ -5,6 +5,7 @@
   font-size: 0.8rem;
 
   flex-wrap: wrap;
+  align-items: center;
 
   &__icon {
     vertical-align: bottom;
@@ -42,6 +43,7 @@
     text-align: right;
 
     @include vp-767 {
+      display: none;
       padding-top: 1rem;
       min-width: 100%;
       text-align: left;
