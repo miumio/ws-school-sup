@@ -1,6 +1,14 @@
 .header {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+
   padding: 12px 0 0;
   text-transform: uppercase;
+
+  z-index: 150;
+  background-color: $color-default-white;
 
   &__row {
     display: flex;

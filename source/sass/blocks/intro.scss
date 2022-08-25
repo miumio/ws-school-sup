@@ -1,5 +1,6 @@
 .intro {
   position: relative;
+  padding-bottom: 2rem;
   color: $color-default-white;
 
   @include vp-1023 {
@@ -13,8 +14,9 @@
     left: 0;
     bottom: 70%;
     text-transform: unset;
+    font-size: 1.5rem;
 
-    padding: 3.5rem 2rem 0;
+    padding: 2.5rem 2rem 0;
     z-index: 100;
     background: $black-to-right;
 
@@ -31,7 +33,7 @@
   &__heading {
     display: block;
     font-weight: 300;
-    font-size: 8rem;
+    font-size: 6rem;
     line-height: 1.1;
     font-family: $ff-poppins;
 
@@ -62,5 +64,9 @@
     --swiper-pagination-color: #2990cb;
     --swiper-pagination-bullet-inactive-color: #fff;
     --swiper-pagination-bullet-inactive-opacity: 0.5;
+  }
+
+  .swiper-slide {
+    padding-top: 45%;
   }
 }

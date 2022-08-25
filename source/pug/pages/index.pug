@@ -11,16 +11,15 @@ block variables
 
 block main
   main
-    //- на странице запрещен "голый" код
-    //- все блоки вставляются из папки pug/components/blocks
-    +intro()
-    include ../components/blocks/news
-    include ../components/blocks/study
-    include ../components/blocks/rent
-    include ../components/blocks/travel
-    include ../components/blocks/price
-    include ../components/blocks/map
-    include ../components/blocks/button-scroll-to-top
+    .content
+      +intro()
+      include ../components/blocks/study
+      include ../components/blocks/rent
+      include ../components/blocks/travel
+      include ../components/blocks/price
+      include ../components/blocks/map
+      include ../components/blocks/news
+      include ../components/blocks/button-scroll-to-top
 
 
 block modals

@@ -1574,8 +1574,14 @@ button,
 }
 
 .header {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
   padding: 12px 0 0;
   text-transform: uppercase;
+  z-index: 150;
+  background-color: #ffffff;
 }
 
 .header__row {
@@ -1849,6 +1855,9 @@ button,
   font-size: 0.8rem;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .submenu__icon {
@@ -2386,6 +2395,7 @@ button,
 
 .intro {
   position: relative;
+  padding-bottom: 2rem;
   color: #ffffff;
 }
 
@@ -2396,7 +2406,8 @@ button,
   left: 0;
   bottom: 70%;
   text-transform: unset;
-  padding: 3.5rem 2rem 0;
+  font-size: 1.5rem;
+  padding: 2.5rem 2rem 0;
   z-index: 100;
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.75)), color-stop(75%, rgba(0, 0, 0, 0)));
   background: -o-linear-gradient(top, rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0) 75%);
@@ -2406,7 +2417,7 @@ button,
 .intro__heading {
   display: block;
   font-weight: 300;
-  font-size: 8rem;
+  font-size: 6rem;
   line-height: 1.1;
   font-family: "Poppins", "Arial", "Verdana", sans-serif;
 }
@@ -2423,6 +2434,10 @@ button,
   --swiper-pagination-color: #2990cb;
   --swiper-pagination-bullet-inactive-color: #fff;
   --swiper-pagination-bullet-inactive-opacity: 0.5;
+}
+
+.intro .swiper-slide {
+  padding-top: 45%;
 }
 
 .section {
@@ -2839,6 +2854,10 @@ button,
   object-fit: cover;
 }
 
+.content {
+  padding-top: var(--header-height);
+}
+
 /* @media (hover: hover), screen and (min-width: 0\0) {
   &:hover,
   &:focus {
@@ -3042,6 +3061,7 @@ button,
   }
 
   .submenu__adress {
+    display: none;
     padding-top: 1rem;
     min-width: 100%;
     text-align: left;
